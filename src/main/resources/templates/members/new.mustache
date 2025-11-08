@@ -1,0 +1,19 @@
+{{>layout/header}}
+
+<form action="/members/join" method="post" class="container">
+    <div class="mb-3">
+        <label for="" class="form-label">ID</label>
+        <input type="text" class="form-control" name="mail">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">PW</label>
+        <input type="password" name="pw" rows="3" class="form-control">
+        <div>
+            <button class="btn btn-primary" type="submit">join</button>
+            <a href="/members">Back</a>
+
+        </div>
+    </div>
+</form>
+
+{{>layout/footer}}

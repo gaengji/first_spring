@@ -1,0 +1,19 @@
+{{>layout/header}}
+{{#member}}
+    <form action="/members/update" method="post" class="container">
+        <input type="hidden" name="id" value="{{id}}">
+        <div class="mb-3">
+            <label for="" class="form-label">제목</label>
+                <input type="text" class="form-control" name="mail" value="{{mail}}">
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">내용</label>
+            <textarea name="pw" rows="3" class="form-control">{{pw}}</textarea>
+            <div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </div>
+        <a href="/articles/{{member.id}}">Back</a>
+    </form>
+{{/member}}
+{{>layout/footer}}
