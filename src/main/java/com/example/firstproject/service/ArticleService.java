@@ -25,8 +25,15 @@ public class ArticleService {
         return articleRepository.findAll();
     }
 
+    @Transactional
     public Article index(Long id) {
-        return articleRepository.findById(id).orElse(null);
+        Article article = articleRepository.findById(id).orElse(null);
+
+        if (article != null) {
+            article.increaseViews();
+        }
+
+        return article;
     }
 
     public Article create(ArticleForm dto) {

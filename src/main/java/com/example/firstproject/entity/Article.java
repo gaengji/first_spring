@@ -23,6 +23,16 @@ public class Article {
     @Column
     private String content;
 
+    @Column
+    private Integer views = 0;
+
+    public void increaseViews() {
+        if (this.views == null) {
+            this.views = 0;
+        }
+        this.views++;
+    }
+
     public void patch(Article article) {
         if (article.title != null) {
             this.title = article.title;

@@ -18,6 +18,11 @@
     {{/article}}
     </tbody>
 </table>
+<div class="mb-3">
+    <span class="badge bg-info text-dark">조회수: {{article.views}}</span>
+    <span class="badge bg warning text-dark">댓글: {{commentCount}}개</span>
+</div>
+
 <a href="/articles" class="btn btn-info">List</a>
 <a href="/articles/{{article.id}}/edit" class="btn btn-primary">Edit</a>
 <a href="/articles/{{article.id}}/delete" class="btn btn-danger">Delete</a>
